@@ -1,5 +1,7 @@
+# Sends HTTP responses back to the client (JSON or HTML)
+
 import json
-from middlewares import add_cors_headers
+from core.middleware import add_cors_headers
 
 def send_json(handler, status, data):
     handler.send_response(status)
