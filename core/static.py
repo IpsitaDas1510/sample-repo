@@ -20,5 +20,4 @@ def serve_static(handler, filepath):
 
     except Exception as e:
         print("STATIC ERROR:", e)
-        send_404(handler)
-                
+        send_404(handler)        
