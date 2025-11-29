@@ -22,10 +22,10 @@ def db_create(data):
         "INSERT INTO students (name, email, course, year, created_at) VALUES (?, ?, ?, ?, ?)",
         (data["name"], data["email"], data["course"], data["year"], now)
     )
-#     conn.commit()
-#     new_id = cur.lastrowid
-#     conn.close()
-#     return db_get_one(new_id)
+    conn.commit()
+    new_id = cur.lastrowid
+    conn.close()
+    return db_get_one(new_id)
 
 # def db_update(student_id, data):
 #     conn = get_connection()
