@@ -4,9 +4,13 @@ import json
 from core.responses import send_json, send_404
 from core.request import parse_json_body
 from services.student_service import (
-    service_get_all
-    , service_get_one
-    , service_create
+    service_create,
+    service_delete,
+    service_get_all,
+    service_get_one,
+    service_update
+    # , service_get_one
+    # , service_create
     # , service_update
     # , service_delete
 )
@@ -23,11 +27,11 @@ def create_student(handler):
     new_student = service_create(data)
     return send_json(handler, 201, new_student)
 
-# def update_student(handler, student_id):
-#     data = parse_json_body(handler)
-#     updated = service_update(student_id, data)
-#     return send_json(handler, 200, updated) if updated else send_404(handler)
+def update_student(handler, student_id):
+    data = parse_json_body(handler)
+    updated = service_update(student_id, data)
+    return send_json(handler, 200, updated) if updated else send_404(handler)
 
-# def delete_student(handler, student_id):``
-#     deleted = service_delete(student_id)
-#     return send_json(handler, 200, {"deleted": True}) if deleted else send_404(handler)
+def delete_student(handler, student_id):
+    deleted = service_delete(student_id)
+    return send_json(handler, 200, {"deleted": True}) if deleted else send_404(handler)
