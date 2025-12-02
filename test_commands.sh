@@ -12,24 +12,24 @@ curl -X GET "http://localhost:8000/api/students/1"
 curl -X POST "https://humble-broccoli-r4q7g7r6qg94hpg4r-8000.app.github.dev/api/students" \
   -H "Content-Type: application/json" \
   -d '{
-    "name": "p neha",
-    "email": "p sneha@example.com",
+    "name": "Alice 3",
+    "email": "alice@example.com",
     "course": "Computer Science",
     "year": 2
   }'
 
 # # D. Update Student
-curl -X PUT "https://humble-broccoli-r4q7g7r6qg94hpg4r-8000.app.github.dev/api/students" \
+curl -X PUT "https://humble-broccoli-r4q7g7r6qg94hpg4r-8000.app.github.dev/api/students/1" \
   -H "Content-Type: application/json" \
   -d '{
-    "name": "Alice Updated",
-    "email": "alice_new@example.com",
+    "name": "Alice 1",
+    "email": "alice_1@example.com",
     "course": "Data Science",
-    "year": 4
+    "year": 1
   }'
 
 # # E. Delete Student
-curl -X DELETE "https://humble-broccoli-r4q7g7r6qg94hpg4r-8000.app.github.dev/api/students/1"
+curl -X DELETE "https://humble-broccoli-r4q7g7r6qg94hpg4r-8000.app.github.dev/api/students/4"
 
 
 # ##################### DB Observation Via SQLite Web
