@@ -12,7 +12,7 @@ curl -X GET "http://localhost:8000/api/students/1"
 curl -X POST "https://humble-broccoli-r4q7g7r6qg94hpg4r-8000.app.github.dev/api/students" \
   -H "Content-Type: application/json" \
   -d '{
-    "name": "Alice 3",
+    "name": "Alice 06-12-2025",
     "email": "alice@example.com",
     "course": "Computer Science",
     "year": 2

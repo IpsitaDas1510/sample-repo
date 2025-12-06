@@ -1,6 +1,6 @@
 import { 
     apiGetAll, 
-    // apiGetOne, 
+    apiGetOne, 
     // apiCreate, 
     // apiUpdate, 
     // apiDelete 
