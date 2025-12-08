@@ -1,12 +1,12 @@
 import { 
     apiGetAll, 
     apiGetOne, 
-    // apiCreate, 
+    apiCreate, 
     // apiUpdate, 
     // apiDelete 
 } from "../services/studentService.js";
 
-// import { showAlert } from "../components/Alert.js";
+import { showAlert } from "../components/Alert.js";
 import { renderStudentTable } from "../components/StudentTable.js";
 import { resetForm, fillForm } from "../components/StudentForm.js";
 
@@ -54,7 +54,6 @@ export function initStudentController() {
   });
 }
 
-
 // Fetch all student data from the API and update the user interface
 export async function loadStudents() {
   // Get references to the loading spinner and the main data table elements
@@ -79,15 +78,15 @@ export async function loadStudents() {
 }
 
 
-// // Create a new student
-// export async function createNewStudent(data) {
-//   const res = await apiCreate(data);
-//   if (res.ok) {
-//     showAlert("Student added!");
-//     resetForm();
-//     loadStudents();
-//   }
-// }
+// Create a new student
+export async function createNewStudent(data) {
+  const res = await apiCreate(data);
+  if (res.ok) {
+    showAlert("Student added!");
+    resetForm();
+    loadStudents();
+  }
+}
 
 // // Load a student into the form for editing
 // export async function editStudent(id) {
